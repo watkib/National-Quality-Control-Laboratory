@@ -1,0 +1,1 @@
+Equipment available goes here
