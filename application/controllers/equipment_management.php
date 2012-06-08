@@ -11,7 +11,7 @@ class Equipment_Management extends MY_Controller{
 	
 	public function listing(){
 		$data = array();
-		$data['content_view'] = "equipment_v";
+		$data['settings_view'] = "equipment_add_v";
 		$data['equipment'] = Equipment::getAll();
 		$this -> base_params($data);
 	}//end listing
@@ -50,11 +50,11 @@ class Equipment_Management extends MY_Controller{
 		$data['styles'] = array("jquery-ui.css");
 		$data['scripts'] = array("jquery-ui.js");
 		$data['quick_link'] = "equipment";
-		//$data['title'] = "System Settings";
-		$data['content_view'] = "equipment_v";
-		//$data['banner_text'] = "System Settings";
+		$data['title'] = "System Settings";
+		$data['content_view'] = "settings_v";
+		$data['banner_text'] = "System Settings";
 		//$data['link'] = "settings_management";
 		
-		$this -> load -> view('equipment_add_v',$data);
+		$this -> load -> view('template',$data);
 	}//end base_params
 }//end class

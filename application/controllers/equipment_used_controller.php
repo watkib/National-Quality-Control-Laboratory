@@ -10,8 +10,10 @@ class Equipment_Used_Controller extends MY_Controller{
 	}//end index
 	
 	public function listing(){
-		$data['content_view'] = "equipment_used_v";
+		$data = array();
+		$data['settings_view'] = "equipment_used_add";
 		$data['equipment_used'] = Equipment_used::getAll();
+		$data['equipments'] = Equipment::getAll();
 		$this -> base_params($data);
 	}//end listing
 	
@@ -53,12 +55,12 @@ class Equipment_Used_Controller extends MY_Controller{
 	public function base_params($data) {
 		$data['styles'] = array("jquery-ui.css");
 		$data['scripts'] = array("jquery-ui.js");
-		$data['quick_link'] = "equipment";
-		//$data['title'] = "System Settings";
-		//$data['content_view'] = "settings_v";
+		$data['quick_link'] = "equipment_used";
+		$data['title'] = "System Settings";
+		$data['content_view'] = "settings_v";
 		//$data['banner_text'] = "System Settings";
 		//$data['link'] = "settings_management";
 		
-		$this -> load -> view('equipment_used_add',$data);
+		$this -> load -> view('template',$data);
 	}//end base_params
 }//end class
