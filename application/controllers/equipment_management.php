@@ -53,7 +53,7 @@ class Equipment_Management extends MY_Controller{
 		$data['title'] = "System Settings";
 		$data['content_view'] = "settings_v";
 		$data['banner_text'] = "System Settings";
-		//$data['link'] = "settings_management";
+		$data['link'] = "settings_management";
 		
 		$this -> load -> view('template',$data);
 	}//end base_params
