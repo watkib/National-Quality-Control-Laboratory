@@ -11,7 +11,7 @@ class Sample extends Doctrine_Record {
 		$this -> hasColumn('Presentation', 'int', 15);
 		$this -> hasColumn('Label_claim', 'varchar', 35);
 		$this -> hasColumn('Batch_no', 'varchar', 35);
-		$this -> hasColumn('Product_no', 'varchar', 35);
+		$this -> hasColumn('License_no', 'varchar', 35);
 		$this -> hasColumn('Manufacture_date', 'varchar', 15);
 		$this -> hasColumn('Expiry_date', 'varchar', 15);
 		$this -> hasColumn('Client_name', 'int', 15);

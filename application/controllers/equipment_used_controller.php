@@ -24,7 +24,7 @@ class Equipment_Used_Controller extends MY_Controller{
 		$this -> base_params($data);
 	}//end add
 	
-	public function save(){
+	public function save(){ 
 		$valid = $this -> _validate_submission();
 		if($valid == false){
 			$data['content_view'] = "equipment_used_add";
