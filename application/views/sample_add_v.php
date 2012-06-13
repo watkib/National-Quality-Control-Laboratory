@@ -1,5 +1,6 @@
+<div class="view_content">
 <?php
-$attributes = array('enctype' => 'multipart/form-data');
+$attributes = array('id' => 'entry_form');
 echo form_open('sample_controller/save',$attributes);
 echo validation_errors('
 <p class="error">', '</p>
@@ -8,7 +9,7 @@ echo validation_errors('
 
 <h1><center>Sample Information Form</center></h1>
 
-<table>
+<table class="dave-table">
 	<tr>
 		<td><label>Date Sample Submitted</label></td><td><input type="text" name="submission_date" /></td>
 		<td><label>Laboratory Reference No.</label></td><td><input type="text" name="lab_ref_no" /></td>
@@ -83,7 +84,8 @@ echo validation_errors('
 	</tr>
 	
 	<tr>
-		<td><input type="submit" value="Add sample information" /></td>
+		<td><input type="submit" value="Add sample information" class="submit-button" name="submit"/></td>
 	</tr>
 </table>
+</div>
 <?php echo form_close();?>
