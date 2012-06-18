@@ -1,3 +1,10 @@
+#tests th {
+	text-align:center;
+	background: #4D90FE;
+	border-right:1px solid #fff;
+	color: #ffffff;
+	font:bold 11px verdana;
+}
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, Verdana, sans-serif;
 	color: #3F3F38;
@@ -216,13 +223,13 @@ input[type =
 }
 .action_button:hover {
 	cursor: pointer;
-	border: 1px solid #2FB74F;
+	border: 1px solid #AA6600;
 	color: #fff;
 	text-shadow: 0 1px rgba(0,0,0,0.3);
-	background-color: #36D148;
-	background-image: -webkit-gradient(linear,left top,left bottom,from(#46EB59),to(#36D148));
-	background-image: -webkit-linear-gradient(top,#46EB59,#36D148);
-	background-image: -moz-linear-gradient(top,#46EB59,#36D148);
+	background-color: #AA6600;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#AA6600),to(#AA6600));
+	background-image: -webkit-linear-gradient(top,#AA6600,#AA6600);
+	background-image: -moz-linear-gradient(top,#AA6600,#AA6600);
 }
 .action_button {
 	width: 150px;
@@ -235,7 +242,7 @@ input[type =
 	font-weight: bolder;
 	display: block;
 	text-align: center;
-	background: #36D148;
+	background: #C53727;
 	-moz-border-radius: 2px;
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
@@ -249,7 +256,7 @@ input[type =
 	display: inline-block;
 	min-width: 54px;
 	text-align: center;
-	color: #555;
+	color: #ffffff;
 	font-size: 11px;
 	font-weight: bold;
 	height: 27px;
@@ -265,10 +272,10 @@ input[type =
 	transition: all 0.218s;
 	border: 1px solid #dcdcdc;
 	border: 1px solid rgba(0, 0, 0, 0.1);
-	background-color: #f5f5f5;
-	background-image: -webkit-gradient(linear,left top,left bottom,from(#f5f5f5),to(#f1f1f1));
-	background-image: -webkit-linear-gradient(top,#f5f5f5,#f1f1f1);
-	background-image: -moz-linear-gradient(top,#f5f5f5,#f1f1f1);
+	background-color: #C53727;
+	background-image: -webkit-gradient(linear,left top,left bottom,from(#C53727),to(#C53727));
+	background-image: -webkit-linear-gradient(top,#C53727,#C53727);
+	background-image: -moz-linear-gradient(top,#C53727,#C53727);
 
 	-webkit-user-select: none;
 	-moz-user-select: none;

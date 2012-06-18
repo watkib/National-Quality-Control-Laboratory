@@ -4,25 +4,22 @@ class Products extends Doctrine_Record {
 	
 	public function setTableDefinition() {
 		
-	$this->hasColumn('name','string', 45);
-	$this->hasColumn('presentation','string', 200);
-	$this->hasColumn('batch_no','integer', 30);
-	$this->hasColumn('manufacture_date','date');
-	$this->hasColumn('expiry_date','date');
-	$this->hasColumn('active_ingredient','string', 45);
-	$this->hasColumn('active_ingredient_amount','integer',11);	
-	$this->hasColumn('quantity_submitted','string', 45);
+	$this->hasColumn('Name','varchar', 25);
+	$this->hasColumn('Presentation','varchar', 200);
+	$this->hasColumn('Batch_no','varchar', 25);
+	$this->hasColumn('Manufacture_date','varchar',15);
+	$this->hasColumn('Expiry_date','varchar',15);
+	$this->hasColumn('Quantity_submitted','int', 15);
 	
 	}
 
 	public function setUp() {
-		$this -> setTableName('products');
-		
+		$this -> setTableName('Products');
 	}//end setUp
 
 
 	public function getAll() {
-		$query = Doctrine_Query::create() -> select("*") -> from("products");
+		$query = Doctrine_Query::create() -> select("*") -> from("Products");
 		$productData = $query -> execute();
 		return $productData;
 	}//end getall

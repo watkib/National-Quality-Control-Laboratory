@@ -19,4 +19,4 @@ $config = array('data_fixtures_path'  =>  dirname( <strong>FILE</strong>) . DIRE
                     ));
  
 $cli = new Doctrine_Cli($config);
-$cli->run($_SERVER['argv'])
+$cli->run($_SERVER['argv']);

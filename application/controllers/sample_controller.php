@@ -11,8 +11,7 @@ class Sample_Controller extends MY_Controller{
 	
 	public function listing(){
 		$data = array();
-		$data['settings_view'] = "sample_add_v";
-		//$data['equipment'] = Equipment::getAll();
+		$data['settings_view'] = "sample_v";
 		$this -> base_params($data);
 	}//end listing
 	

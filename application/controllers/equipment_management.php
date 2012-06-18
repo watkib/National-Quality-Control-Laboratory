@@ -11,22 +11,16 @@ class Equipment_Management extends MY_Controller{
 	
 	public function listing(){
 		$data = array();
-		$data['settings_view'] = "equipment_add_v";
-		$data['equipment'] = Equipment::getAll();
+		$data['settings_view'] = "equipment_v";
+		$data['equipment_details'] = Equipment::getAllHydrated();
+		$this -> table -> set_heading(array('id', 'Equipment Name', 'National Quality Control Lab Code'));
 		$this -> base_params($data);
 	}//end listing
-	
-	public function add(){
-		$data['content_view'] = "equipment_add_v";
-		$data['title'] = "Add New Equipment";
-		$this -> base_params($data);
-	}//end add
 	
 	public function save(){
 		$valid = $this -> _validate_submission();
 		if($valid == false){
-			$data['content_view'] = "equipment_add_v";
-			$this -> base_params($data);
+			$this -> listing();
 		}else{
 			$name = $this -> input -> post("equipment_name");
 			$nqcl_code = $this -> input -> post("nqcl_code");
@@ -52,7 +46,7 @@ class Equipment_Management extends MY_Controller{
 		$data['quick_link'] = "equipment";
 		$data['title'] = "System Settings";
 		$data['content_view'] = "settings_v";
-		$data['banner_text'] = "System Settings";
+		$data['banner_text'] = "NQCL Settings";
 		$data['link'] = "settings_management";
 		
 		$this -> load -> view('template',$data);

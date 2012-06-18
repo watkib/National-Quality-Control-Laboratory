@@ -40,7 +40,7 @@ if (isset($styles)) {
 
 				<div id="system_title">
 					<span style="display: block; font-weight: bold; font-size: 14px; margin:2px;">Ministry of Medical Services/Public Health and Sanitation</span>
-					<span style="display: block; font-size: 12px;">Disease Surveillance and Response</span>
+					<span style="display: block; font-size: 12px;">National Quality Control Laboratory</span>
 					
 				</div>
 				<div class="banner_text"><?php echo $banner_text;?></div>
@@ -53,6 +53,8 @@ if (isset($styles)) {
 	$current = $this -> router -> class;
 	$counter = 0;
 	?>">Home </a>
+	
+	
 <?php
 foreach($menus as $menu){?>
 	<a href = "<?php echo $menu['url'];?>" class="top_menu_link <?php

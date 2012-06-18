@@ -11,7 +11,7 @@ class Equipment_Used_Controller extends MY_Controller{
 	
 	public function listing(){
 		$data = array();
-		$data['settings_view'] = "equipment_used_add";
+		$data['settings_view'] = "equipment_used_v";
 		$data['equipment_used'] = Equipment_used::getAll();
 		$data['equipments'] = Equipment::getAll();
 		$this -> base_params($data);
