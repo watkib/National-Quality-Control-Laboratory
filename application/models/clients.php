@@ -15,7 +15,7 @@ class Client extends Doctrine_Record {
 	}//end setUp
 
 	public function getAll() {
-		$query = Doctrine_Query::create() -> select("*") -> from("Clients");
+		$query = Doctrine_Query::create() -> select("*") -> from("Client");
 		$clientData = $query -> execute();
 		return $clientData;
 	}//end getall

@@ -2,46 +2,64 @@
 
 class Client_Management extends MY_Controller{
 	function __construct(){
+		//calls constructor method
 		parent::__construct();
 	}//end constructor
 	
 	public function index(){
+		//redirects to listing method
 		$this -> listing();
 	}//end index
 	
 	public function listing(){
+		//method listing() gives a tabular report of existing records
 		$data = array();
-//		$data['title'] = "Existing Clients";
+		//places view on the right in the array key 'settings_view', and can thus be accessed under the key from elsewhere
 		$data['settings_view'] = "clients_v";
+				
+		//the method call on the right passes the returned data as an array and stores it in the 'client_details' key to be called from another file
 		$data['client_details'] = Client::getAllHydrated();
+		
+		//formatting for the tabular report mentioned above, make sure to pass id and the rest are the way you'd like the title captions
 		$this -> table -> set_heading(array('id', 'Client Name', 'Client Address','Client Number', 'Contact Person', 'Contact Phone'));
+		
+		//pass all the data in the '$data' array to the base_params method
 		$this -> base_params($data);
 	}//end listing
 		
 	public function save(){
+		//stores the validation results in a variable, $valid
 		$valid = $this -> _validate_submission();
+		
+		//if the result is true or false...
 		if($valid == false){
 			$this -> listing();
 		}else{
+		 //variable name   //class  //html control //php post function("control name in the html file")
 			$client_name = $this -> input -> post("client_name");
 			$client_address = $this -> input -> post("client_address");
 			$client_number = $this -> input -> post("client_number");
 			$contact_person = $this -> input -> post("contact_person");
 			$contact_phone = $this -> input -> post("contact_phone");
 			
+			//variable storing the class instance
 			$client = new Client();
+			
+			//passing the variables posted above to the class variable
 			$client -> Name = $client_name;
 			$client -> Address = $client_address;
 			$client -> Client_number = $client_number;
 			$client -> Contact_person = $contact_person;
 			$client -> Contact_phone = $contact_phone;
-						
+
+			//save the data						
 			$client -> save();
 			redirect("client_management/listing");
 		}//end else
 	}//end save
 	
 	private function _validate_submission() {
+		//validation rules
 		$this -> form_validation -> set_rules('client_name', 'Client Name', 'trim|required|min_length[2]|max_length[25]');
 		$this -> form_validation -> set_rules('client_address', 'Client Address', 'trim|required|min_length[2]|max_length[25]');
 		$this -> form_validation -> set_rules('client_number', 'Client Number', 'trim|required|min_length[2]|max_length[15]');
