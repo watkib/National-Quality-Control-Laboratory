@@ -21,7 +21,7 @@ class Client_Management extends MY_Controller{
 		$data['client_details'] = Client::getAllHydrated();
 		
 		//formatting for the tabular report mentioned above, make sure to pass id and the rest are the way you'd like the title captions
-		$this -> table -> set_heading(array('id', 'Client Name', 'Client Address','Client Number', 'Contact Person', 'Contact Phone'));
+		$this -> table -> set_heading(array('id', 'Client Name', 'Client Address','Client Type', 'Contact Person', 'Contact Phone'));
 		
 		//pass all the data in the '$data' array to the base_params method
 		$this -> base_params($data);

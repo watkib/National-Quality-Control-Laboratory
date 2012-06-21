@@ -16,7 +16,7 @@ class Sample_Controller extends MY_Controller{
 	}//end listing
 	
 	public function add(){
-		$data['content_view'] = "sample_add_v";
+		$data['settings_view'] = "sample_add_v";
 		$data['title'] = "Add New Sample Information";
 		$this -> base_params($data);
 	}//end add
