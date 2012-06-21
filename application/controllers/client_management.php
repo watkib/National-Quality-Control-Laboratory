@@ -62,7 +62,7 @@ class Client_Management extends MY_Controller{
 		//validation rules
 		$this -> form_validation -> set_rules('client_name', 'Client Name', 'trim|required|min_length[2]|max_length[25]');
 		$this -> form_validation -> set_rules('client_address', 'Client Address', 'trim|required|min_length[2]|max_length[25]');
-		$this -> form_validation -> set_rules('client_number', 'Client Number', 'trim|required|min_length[2]|max_length[15]');
+		$this -> form_validation -> set_rules('client_number', 'Client Number', 'trim|required|min_length[1]|max_length[15]');
 		$this -> form_validation -> set_rules('contact_person', 'Contact Person', 'trim|required|min_length[2]|max_length[25]');
 		$this -> form_validation -> set_rules('contact_phone', 'Contact Telephone Number', 'trim|required|min_length[10]|max_length[10]');
 		return $this -> form_validation -> run();

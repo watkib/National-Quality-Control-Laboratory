@@ -36,7 +36,7 @@ class Test_Controller extends MY_Controller{
 	
 	private function _validate_submission() {
 		$this -> form_validation -> set_rules('test_name', 'Test Name', 'trim|required|min_length[1]|max_length[35]');
-		$this -> form_validation -> set_rules('charges', 'Charges', 'required');
+		//$this -> form_validation -> set_rules('charges', 'Charges', 'required');
 		return $this -> form_validation -> run();
 	}//end validate_submission
 	

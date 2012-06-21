@@ -1,6 +1,6 @@
 <?php
 
-class Sample extends Doctrine_Record {
+class Sample_Information extends Doctrine_Record {
 
 	public function setTableDefinition() {
 		$this -> hasColumn('Submission_date', 'varchar', 15);
@@ -11,7 +11,7 @@ class Sample extends Doctrine_Record {
 		$this -> hasColumn('Presentation', 'int', 15);
 		$this -> hasColumn('Label_claim', 'varchar', 35);
 		$this -> hasColumn('Batch_no', 'varchar', 35);
-		$this -> hasColumn('License_no', 'varchar', 35);
+		$this -> hasColumn('Product_no', 'varchar', 35);
 		$this -> hasColumn('Manufacture_date', 'varchar', 15);
 		$this -> hasColumn('Expiry_date', 'varchar', 15);
 		$this -> hasColumn('Client_name', 'int', 15);
@@ -27,12 +27,12 @@ class Sample extends Doctrine_Record {
 		$this -> hasColumn('Date', 'varchar', 15);
 	}//end setTableDefinition
 
-	public function setTableName() {
-		$this -> setTableName('sample_information');
+	public function setUp() {
+		$this -> setTableName('Sample_Information');
 	}//end setTableName
 
 	public function getAll() {
-		$query = Doctrine_Query::create() -> select("*") -> from("sample_information");
+		$query = Doctrine_Query::create() -> select("*") -> from("Sample_Information");
 		$sampleData = $query -> execute();
 		return $sampleData;
 	}//end getAll
