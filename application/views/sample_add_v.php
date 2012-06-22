@@ -71,6 +71,14 @@ echo validation_errors('
 		<td><label>Samples Returned</label></td><td><input type="text" name="samples_returned" /></td>
 	</tr>
 	
+
+	<tr id="test">
+		<td>Test(s) Required</td><td><input type="text" name="tests_required" /></td>
+		<td>Limits</td><td><input type="text" name="tests_required_limits" /></td>
+		<td><input type="button" id="newtest" name="newtest" value="Add Test"> </td>	
+	</tr>
+
+
 	<tr>
 		<td><label>Analyst</label></td><td><input type="text" name="analyst" /></td>
 	</tr>
@@ -88,4 +96,12 @@ echo validation_errors('
 	</tr>
 </table>
 </div>
+
+<script>
+$("#newtest").click(function () {
+ 
+	  $('#test').clone(true).insertAfter("#test");
+ 
+    });
+</script>
 <?php echo form_close();?>
