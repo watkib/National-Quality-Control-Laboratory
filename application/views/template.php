@@ -39,7 +39,7 @@ if (isset($styles)) {
 </div>
 
 				<div id="system_title">
-					<span style="display: block; font-weight: bold; font-size: 14px; margin:2px;">Ministry of Medical Services/Public Health and Sanitation</span>
+					<span style="display: block; font-weight: bold; font-size: 14px; margin:2px;">Ministry of Medical Services</span>
 					<span style="display: block; font-size: 12px;">National Quality Control Laboratory</span>
 					
 				</div>
